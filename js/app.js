@@ -19,5 +19,9 @@ function eventListeners(){
 
 function preguntarPresupuesto(){
     const presupuestoUsuario = prompt('Cual es tu presupuesto semanal?');
-    console.log(presupuestoUsuario);
+    console.log(Number(presupuestoUsuario));
+
+    if(presupuestoUsuario === '' || presupuestoUsuario === null || isNaN(presupuestoUsuario) || presupuestoUsuario < 0){
+        window.location.reloaded();
+    }
 }
